@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#090711"><title>Triple Táchira | Tablero de números</title>
+<meta name="description" content="Triple Táchira · tablero de números de tres cifras por series.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css">
+</head><body>
+<div class="casino-glow glow-one"></div><div class="casino-glow glow-two"></div>
+<header class="hero">
+ <div class="brandbar"><div class="top-badge">🇻🇪 TRIPLE TÁCHIRA</div><div class="socials"><span>🎰 JUEGA CON RESPONSABILIDAD</span></div></div>
+ <div class="country-label">SORTEO PROMOCIONAL · VENEZUELA</div>
+ <h1>TRIPLE <span>TÁCHIRA</span></h1>
+ <p class="hero-subtitle">✨ Tu suerte puede estar en tres cifras ✨</p>
+ <p class="tagline">Elige una serie, selecciona tus números y revisa tu jugada.</p>
+ <div class="trust-row"><span>🎰 ESTILO CASINO</span><span>🇻🇪 VENEZUELA</span><span>🔢 3 CIFRAS</span><span>✨ 10 SERIES</span></div>
+ <div class="prize-card"><div class="prize-copy"><div class="mini-label">🎯 TABLERO DE PARTICIPACIÓN</div><h2>¡ELIGE TU JUGADA!</h2><p>10 series con números desde 000 hasta 999. Cada serie contiene mil combinaciones.</p><div class="lucky-pills"><span>♠ Selección sencilla</span><span>♦ Diseño móvil</span></div></div><div class="prize-photo"><div class="photo-placeholder"><div class="tachira-mark">🇻🇪</div><b>TRIPLE TÁCHIRA</b><small>Tu jugada · Tu número · Tu suerte</small></div></div></div>
+ <div class="offers"><div class="offer featured"><small>🔢 TOTAL DE COMBINACIONES</small><strong>10.000 NÚMEROS</strong></div><div class="offer"><small>🎟️ FORMATO</small><strong>000 – 999</strong></div></div>
+ <div class="stats"><div><strong>10.000</strong><span>COMBINACIONES</span></div><div><strong id="availableCount">5.500</strong><span>DISPONIBLES</span></div><div><strong id="blockedCount">4.500</strong><span>NO DISPONIBLES</span></div></div>
+ <div class="progress-card"><div class="progress-head"><div><span class="eyebrow">🔥 ESTADO DEL TABLERO</span><strong><span id="progressPercent">45</span>% no disponibles</strong></div><span class="progress-chip">10 SERIES</span></div><div class="progress-track"><div class="progress-fill" id="progressFill" style="width:45%"></div></div><div class="progress-labels"><span>000</span><span>Estado de las combinaciones</span><span>999</span></div></div>
+</header>
+<main>
+ <section class="payment-box"><div class="payment-title">💳 PAGO MÓVIL · DATOS OFICIALES INDICADOS</div><div class="payment-content"><div class="nequi-card bank-card payment-card"><div class="payment-bank-heading"><span class="nequi-icon">🏦</span><div><small>BANCO RECEPTOR</small><strong class="bank-name">Banco Venezolano de Crédito</strong></div></div><div class="payment-data-row"><span class="payment-label">TELÉFONO</span><strong class="payment-value">04245783934</strong><button class="copy-payment-btn" data-copy="04245783934" aria-label="Copiar teléfono">COPIAR</button></div><div class="payment-data-row"><span class="payment-label">CÉDULA</span><strong class="payment-value">30353321</strong><button class="copy-payment-btn" data-copy="30353321" aria-label="Copiar cédula">COPIAR</button></div><div class="payment-method-tag">PAGO MÓVIL</div></div></div><p class="edit-note">Verifica los datos del destinatario antes de confirmar cualquier transferencia.</p></section>
+ <section class="legend"><div><span class="dot available"></span> Disponible</div><div><span class="dot unavailable"></span> No disponible</div><div><span class="dot selected-dot"></span> Seleccionado</div><div class="selected-info">🎯 Seleccionados: <b id="selectedCount">0</b></div></section>
+ <section class="purchase"><div class="ticket-icon">🎟️</div><h2>TU JUGADA SELECCIONADA</h2><p id="selectedText">Aún no has seleccionado números.</p><div class="price-summary"><span>🔢 TOTAL A PAGAR</span><strong id="totalPrice">0 números</strong></div><p class="pricing-breakdown" id="priceBreakdown">1 número = 7.000 Bs. · 5 números = 10.000 Bs.</p><div class="numbers-whatsapp-card"><span class="numbers-whatsapp-kicker">🎯 RESUMEN DE JUGADA</span><strong><span id="whatsappSelectedCount">0</span> números seleccionados</strong><p id="whatsappSelectedNumbers">Elige números disponibles en cualquiera de las series.</p><div class="whatsapp-total">TOTAL: <strong id="totalCost">0 Bs.</strong></div><button class="whatsapp-btn send-numbers-btn" id="sendNumbersBtn" type="button" disabled>📲 ENVIAR NÚMEROS AL WHATSAPP</button></div><button id="clearBtn" class="secondary">Limpiar selección</button></section>
+ <section class="number-panel"><div class="panel-title"><div class="panel-kicker">♠ ♦ ♥ ♣ TABLERO DE LA SUERTE ♠ ♦ ♥ ♣</div><h2>SELECCIONA TU SERIE Y TUS NÚMEROS</h2><p>Los números siempre se muestran con exactamente tres cifras.</p></div>
+ <div class="series-picker" id="seriesPicker" aria-label="Seleccionar serie"></div>
+ <div class="number-tools"><label for="numberSearch">Buscar número</label><input id="numberSearch" inputmode="numeric" maxlength="3" placeholder="Ej. 025"><button id="clearSearch" type="button">Limpiar</button><span id="seriesLabel">Serie 01 · 000–999</span></div>
+ <div id="numbers" class="numbers-grid"></div><p class="grid-note">Los números rojos están marcados como no disponibles. Cambia de serie para consultar las otras 9.000 combinaciones.</p>
+ </section>
+
+</main>
+<footer><div class="footer-brand">🇻🇪 TRIPLE TÁCHIRA</div><small>© 2026 · Sitio promocional independiente. No representa ni está afiliado a una lotería estatal.</small></footer>
+<script src="script.js"></script></body></html>
